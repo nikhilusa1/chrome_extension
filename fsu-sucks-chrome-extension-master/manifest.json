@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "FSU Sucks",
+  "description": "Replaces FSU stuff with more accurate text.",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "Seminole.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts":
+  [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
